@@ -6,13 +6,10 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import ru.tinkoff.qa.apitestmodels.*;
-
 import java.util.Arrays;
 
 public class PetsApiTests {
     UserRequest userRequest;
-    DeleteResponse deleteResponse;
-
     @BeforeEach
     public void init() {
         userRequest = new UserRequest();
@@ -50,7 +47,6 @@ public class PetsApiTests {
                 .post("https://petstore.swagger.io/v2/pet")
                 .then().statusCode(200);
     }
-
 
     @Test
     public void getTest() {
